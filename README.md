@@ -7,10 +7,11 @@
 
 ## How to Use
 
-1. Deploy to Elastic Beanstalk with `eb deploy`.
-2. Configure a slash command integration like so:
+First deploy to Elastic Beanstalk with `eb deploy`.
+
+Then configure a slash command integration like so:
 
 ![example4](assets/example4.png)
 
-3. Enjoy your slack team's new ａｅｓｔｈｅｔｉｃ
+Finally, enjoy your slack team's new ａｅｓｔｈｅｔｉｃ.
 
