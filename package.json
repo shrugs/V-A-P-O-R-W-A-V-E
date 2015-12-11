@@ -1,0 +1,16 @@
+{
+  "name": "vaporwave",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Matt Condon <m@cond.in> (http://mat.tc)",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "string-form-utils": "^0.1.0"
+  }
+}
