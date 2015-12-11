@@ -12,3 +12,5 @@
 
 ![example4](assets/example4.png)
 
+3. Enjoy your slack team's new ａｅｓｔｈｅｔｉｃ
+
