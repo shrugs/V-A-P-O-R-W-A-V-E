@@ -26,7 +26,10 @@ app.post('/slack', function (req, res) {
   for (var match in matches) {
     vw.insertAt(match.index, match[0])
   }
-  res.send(vw);
+  res.json({
+    response_type: 'in_channel',
+    text: vw,
+  });
 });
 
 app.get('/', function(req, res) {
