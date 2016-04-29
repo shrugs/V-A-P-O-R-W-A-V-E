@@ -13,19 +13,24 @@ var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.post('/slack', function (req, res) {
   var inputString = (req.body.text || '');
+
+  var indexShift = 0;
   var m, matches = [];
   while (m = EMOJI_REGEX.exec(inputString)) {
+    m.shiftIndex = m.index - indexShift;
+    indexShift += m[0].length;
     matches.push(m);
   }
   inputString = inputString.split('');
-  for (var match in matches) {
-    inputString.splice(match.index, match[0].length)
-  }
-  console.log(matches);
+  matches.forEach(function(match) {
+    inputString.splice(match.shiftIndex, match[0].length)
+  })
+
   var vw = stringFormUtils.transformToFullwidth(inputString.join(''))
-  for (var match in matches) {
-    vw.insertAt(match.index, match[0])
-  }
+  matches.forEach(function(match) {
+    vw = vw.insertAt(match.index, match[0])
+  })
+
   res.json({
     response_type: 'in_channel',
     text: vw,
