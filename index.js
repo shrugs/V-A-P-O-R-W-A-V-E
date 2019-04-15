@@ -10,11 +10,17 @@ const express = require("express");
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post("*", (req, res) => {
+  console.log(req.body);
+
   if (req.body == null) {
     return res.status(400).send({ error: "no JSON object in the request" });
+  }
+
+  if (req.body.token !== process.env.SLACK_TEAM_TOKEN) {
+    return res.status(400).send({ error: "you're not hackNY!" });
   }
 
   var inputString = req.body.text || "";

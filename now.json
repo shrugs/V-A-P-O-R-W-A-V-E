@@ -5,5 +5,8 @@
       "src": "index.js",
       "use": "@now/node"
     }
-  ]
+  ],
+  "env": {
+    "SLACK_TEAM_TOKEN": "@slack_team_token"
+  }
 }
