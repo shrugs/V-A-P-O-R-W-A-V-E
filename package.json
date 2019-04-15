@@ -1,16 +1,20 @@
 {
   "name": "vaporwave",
-  "version": "1.0.0",
-  "description": "",
+  "version": "2.0.0",
+  "description": "Adds aesthetic to things you say.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "author": "Matt Condon <m@cond.in> (http://mat.tc)",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shrugs/V-A-P-O-R-W-A-V-E"
+  },
   "dependencies": {
     "body-parser": "^1.14.1",
-    "express": "^4.13.3",
+    "express": "^4.16.4",
     "string-form-utils": "^0.1.0"
   }
 }
