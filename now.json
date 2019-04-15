@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "name": "vaporwave",
   "builds": [
     {
       "src": "index.js",
